@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Rose Surprise</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    font-family: 'Segoe UI', Arial;
+}
+
+.page{
+    width:100%;
+    height:100%;
+    display:none;
+    align-items:center;
+    justify-content:center;
+}
+
+.active{display:flex;}
+
+/* Page 1 */
+.rose-page{
+    background:black;
+    flex-direction:column;
+}
+.full-rose{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.open-btn{
+    position:absolute;
+    bottom:80px;
+    padding:18px 50px;
+    font-size:22px;
+    border:none;
+    border-radius:30px;
+    background:rgba(255,255,255,0.85);
+    color:#e63963;
+    cursor:pointer;
+    font-weight:bold;
+    box-shadow:0 0 20px rgba(255,255,255,0.6);
+}
+
+/* Page 2 */
+.love-page{
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+}
+
+.card{
+    background:white;
+    border-radius:30px;
+    padding:45px;
+    max-width:700px;
+    width:90%;
+    text-align:center;
+    box-shadow:0 0 40px rgba(0,0,0,0.3);
+    animation: fade 1.5s ease;
+}
+
+@keyframes fade{
+    from{opacity:0; transform:scale(0.9);}
+    to{opacity:1; transform:scale(1);}
+}
+
+h1{color:#e63963;font-size:38px;}
+.name{font-size:28px;color:#ff4b7d;margin:12px 0;font-weight:bold;}
+p{font-size:20px;color:#444;line-height:1.8;margin-top:15px;}
+
+.mail-btn{
+    margin-top:30px;
+    padding:16px 45px;
+    font-size:20px;
+    border:none;
+    border-radius:15px;
+    background:#e63963;
+    color:white;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page rose-page active" id="page1">
+    <img src="https://i.imgur.com/3ZQ3Z5K.jpg" class="full-rose">
+    <button class="open-btn" onclick="openLove()">OPEN 🌹</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page love-page" id="page2">
+    <div class="card">
+        <h1>Happy Rose Day 🌹</h1>
+        <div class="name">Aniii ❤️</div>
+
+        <p>
+        This rose is not just a flower,<br>
+        it is my heart, my love, my feelings for you ❤️<br><br>
+
+        No matter the distance,<br>
+        my love for you only grows stronger every day 💕<br><br>
+
+        Your smile is my happiness 😊<br>
+        Your voice is my peace 😌<br>
+        Your love is my world 🌍❤️<br><br>
+
+        I may not be there physically,<br>
+        but my heart is always with you 💖
+        </p>
+
+        <button class="mail-btn" onclick="window.location.href='mailto:chowdappa860@gmail.com?cc=chandanachowdappa265@gmail.com&subject=Happy%20Rose%20Day%20My%20Love%20-%20Aniii&body=Happy%20Rose%20Day%20My%20Love%20Aniii%20%F0%9F%8C%B9%0A%0AThis%20rose%20is%20not%20just%20a%20flower%2C%0Ait%20is%20my%20heart%2C%20my%20love%2C%20my%20feelings%20for%20you%20%E2%9D%A4%EF%B8%8F%0A%0ANo%20matter%20the%20distance%2C%0Amy%20love%20for%20you%20only%20grows%20stronger%20every%20day%20%F0%9F%92%95%0A%0AYour%20smile%20is%20my%20happiness%20%F0%9F%98%8A%0AYour%20voice%20is%20my%20peace%20%F0%9F%98%8C%0AYour%20love%20is%20my%20world%20%F0%9F%8C%8D%E2%9D%A4%EF%B8%8F%0A%0AI%20may%20not%20be%20there%20physically%2C%0Abut%20my%20heart%20is%20always%20with%20you%20%F0%9F%92%96'">
+            Send My Love 💌
+        </button>
+    </div>
+</div>
+
+<script>
+function openLove(){
+    document.getElementById("page1").classList.remove("active");
+    document.getElementById("page2").classList.add("active");
+}
+</script>
+
+</body>
+</html>
