@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rose Day Surprise</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+.page{
+    width:100vw;
+    height:100vh;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.active{
+    display:flex;
+}
+
+/* First Page */
+.rose-page{
+    background:black;
+    position:relative;
+}
+
+.rose-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.open-btn{
+    position:absolute;
+    bottom:60px;
+    padding:18px 45px;
+    font-size:22px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#e63963;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 0 20px rgba(255,255,255,0.8);
+}
+
+/* Second Page */
+.love-page{
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    padding:20px;
+}
+
+.card{
+    background:white;
+    border-radius:25px;
+    padding:35px;
+    max-width:750px;
+    width:100%;
+    box-shadow:0 0 30px rgba(0,0,0,0.3);
+    animation: fade 1.2s ease;
+}
+
+@keyframes fade{
+    from{opacity:0; transform:scale(0.9);}
+    to{opacity:1; transform:scale(1);}
+}
+
+h1{
+    color:#e63963;
+    font-size:36px;
+}
+
+p{
+    font-size:20px;
+    color:#444;
+    line-height:1.7;
+    margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page rose-page active" id="page1">
+    <img src="https://i.imgur.com/3ZQ3Z5K.jpg" class="rose-img">
+    <button class="open-btn" onclick="openLove()">OPEN 🌹</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page love-page" id="page2">
+    <div class="card">
+        <h1>Happy Rose Day My Love 🌹</h1>
+
+        <p>
+        This rose is not just a flower,<br>
+        it is my heart, my love, my feelings for you ❤️<br><br>
+
+        No matter the distance,<br>
+        my love for you only grows stronger every day 💕<br><br>
+
+        Your smile is my happiness 😊<br>
+        Your voice is my peace 😌<br>
+        Your love is my world 🌍❤️<br><br>
+
+        I may not be there physically,<br>
+        but my heart is always with you 💖<br><br>
+
+        Forever yours 💌
+        </p>
+    </div>
+</div>
+
+<script>
+function openLove(){
+    document.getElementById("page1").classList.remove("active");
+    document.getElementById("page2").classList.add("active");
+}
+</script>
+
+</body>
+</html>
